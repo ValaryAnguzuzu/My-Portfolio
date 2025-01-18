@@ -100,7 +100,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f6f8f1;;
+  background-color: #f6f8f1;
 }
 
 .home-img img {
@@ -108,7 +108,7 @@ section {
 }
 
 .home-content h3{
-  font-size: 2.2rem;
+  font-size: 3rem;
   font-weight: 700;
 
 }
@@ -128,7 +128,7 @@ span {
 }
 
 .home-content p {
-  font-size: 1.6rem;
+  font-size: 2rem;
 
 }
 
@@ -168,6 +168,7 @@ span {
 
 .btn:hover {
   box-shadow: none;
+  background-color: var(--text-color);
 }
 
 .about {
@@ -193,11 +194,11 @@ span {
 }
 
 .about-content h3 {
-  font-size: 2.6rem;
+  font-size: 3rem;
 }
 
 .about-content p {
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin: 2rem 0 3rem;
 }
 .leadership{
@@ -239,12 +240,12 @@ span {
 }
 
 .leadership-box h3 {
-  font-size: 2.6rem;
+  font-size: 3rem;
 
 }
 
 .leadership-box p {
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin: 1rem 0 3rem;
 }
 
@@ -311,12 +312,14 @@ span {
 
 }
 
+
 .portfolio-layer h4 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  color: #f6f8f1;
 }
 
 .portfolio-layer p {
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin: .3rem 0 1rem;
 
 }
@@ -334,6 +337,10 @@ span {
 .portfolio-layer a i {
   font-size: 2rem;
   color: var(--second-bg-color);
+}
+
+.contact{
+  background-color: #f6f8f1;
 }
 
 .contact h2 {
@@ -358,7 +365,7 @@ span {
 .contact form textarea {
   width: 100%;
   padding: 1.5rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--text-color);
   background: rgb(232, 222, 232);
   border-radius: .8rem;
@@ -397,16 +404,17 @@ span {
   justify-content: center;
   align-items: center;
   padding: .8rem;
-  background: var(--text-color);
+  background: #804186;
   border-radius: .8rem;
   transition: .5s ease;
 }
 
 .footer-iconTop a:hover {
-  box-shadow: 0 0 1rem var(--bg-color);
+  box-shadow: 0 0 1rem #f6f8f1;
+  background-color: var(--text-color);
 }
 .footer-iconTop a i {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   color: var(--second-bg-color);
 }
 
@@ -537,7 +545,7 @@ body {
 }
 
 .timeline-content p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin: 0.5rem 0;
   color: var(--text-color); 
 }
@@ -593,14 +601,21 @@ body {
 
 /* Dark Mode */
 body.dark-mode {
-  background-color: var(--text-color); /* Background matches dark mode theme */
-  color: #f6f8f1; /* Default text color for body */
+  background-color: var(--text-color); 
+  color: #132a43; 
 }
 
 /* Paragraphs */
 body.dark-mode p {
-  color: #f6f8f1; /* Light text for paragraphs */
+  color: #f6f8f1; 
 }
+
+
+body.dark-mode .home-content p {
+  font-size: 2rem;
+  color:teal; 
+}
+
 
 /* Headings */
 body.dark-mode h1,
@@ -609,129 +624,197 @@ body.dark-mode h3,
 body.dark-mode h4,
 body.dark-mode h5,
 body.dark-mode h6 {
-  color: #d6aadf; /* Purple for headings */
+  color: teal; 
 }
 
 /* Header */
 body.dark-mode .header {
-  background-color: var(--text-color); /* Header background */
-  color: #f6f8f1; /* Light header text */
+  background-color: var(--text-color);
+  color: #f6f8f1;
+}
+body.dark-mode .header.sticky {
+  border-bottom: 0.1rem solid teal; 
 }
 
+
 body.dark-mode .navbar a {
-  color: #f6f8f1; /* Light links */
+  color: #f6f8f1; 
 }
 body.dark-mode .logo {
-  color: #f6f8f1;
+  color: teal;
 }
 
 body.dark-mode .navbar a:hover,
 body.dark-mode .navbar a.active {
-  color: #d6aadf; /* Purple for hover/active links */
+  color: teal;
+}
+
+body.dark-mode span {
+  color: #f6f8f1;
 }
 
 /* Buttons */
 body.dark-mode .btn {
-  background-color: #804186; /* Purple button background */
-  color: #f6f8f1; /* Light text */
-  box-shadow: 0 0 1rem #804186; /* Purple glow */
+  background-color: teal; 
+  color: #f6f8f1; 
+  box-shadow: 0 0 1rem teal; 
 }
 
 body.dark-mode .btn:hover {
-  background-color: #d6aadf; /* Lighter purple hover */
-  color: var(--text-color); /* Dark button text */
+  background-color: #804186; 
+  color: #f6f8f1; 
 }
 
+body.dark-mode .home {
+  background-color: var(--text-color); 
+  box-shadow: 0 2px 6px teal;
+}
 /* Portfolio & Timeline Section in Dark Mode */
-body.dark-mode .portfolio-box,
+body.dark-mode .portfolio,
 body.dark-mode .timeline-content {
-  background-color: var(--text-color); /* Background matches dark mode */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  background-color: var(--text-color); 
+  box-shadow: 0 2px 6px teal; 
 }
 
 body.dark-mode .portfolio-layer {
-  background: linear-gradient(rgba(0, 0, 0, .5), #804186); /* Gradient overlay */
+  background: linear-gradient(rgba(0, 0, 0, .5), teal); 
 }
 
 body.dark-mode .portfolio-layer h4,
 body.dark-mode .portfolio-layer p {
-  color: #f6f8f1; /* Light text for contrast */
+  color: #f6f8f1; 
 }
 
 body.dark-mode .timeline::before {
-  background-color: #804186; /* Purple timeline line */
+  background-color: teal;
 }
 
 body.dark-mode .timeline-icon {
-  background-color: #d6aadf; /* Light purple icons */
+  background-color: teal; 
 }
 
 body.dark-mode .timeline-content {
-  background-color: var(--text-color); /* Alternating container background */
-  color: #f6f8f1; /* Light text */
+  background-color: var(--text-color); 
+  color: #f6f8f1;
 }
 
 body.dark-mode .timeline-content:nth-child(even) {
-  background-color: #1b3550; /* Slightly deeper shade for alternation */
+  background-color: #132a43; 
 }
 
 body.dark-mode .timeline-content h3 {
-  color: #d6aadf; /* Purple for subheadings */
+  color: teal; 
 }
 
 body.dark-mode .timeline-content h4 {
-  color: #d6aadf; /* Purple for job titles */
+  color: teal; 
 }
 
 /* Social Media Links in Dark Mode */
 body.dark-mode .social-media a {
-  color: var(--text-color); /* White for icons */
-  border-color: #d6aadf; /* Purple border */
+  color: #f6f8f1; 
+  border-color: teal; 
 }
 
 body.dark-mode .social-media a:hover {
-  background-color: #d6aadf; /* Purple background on hover */
-  color: var(--text-color); /* Dark icon color for contrast */
+  background-color: teal; 
 }
 
 /* Footer in Dark Mode */
 body.dark-mode .footer {
-  background-color: var(--text-color); /* Footer matches dark mode background */
-  color: #f6f8f1; /* Light footer text */
+  background-color: var(--text-color); 
+  color: #f6f8f1; 
 }
 
 body.dark-mode .footer-iconTop a {
-  background-color: #804186; /* Purple icon background */
-  color: #f6f8f1; /* Light arrow */
+  background-color: teal; 
+  color: #f6f8f1; 
 }
 
 body.dark-mode .footer-iconTop a:hover {
-  background-color: #d6aadf; /* Lighter purple on hover */
-  color: var(--text-color); /* Dark arrow color */
+  background-color: #804186; 
+  color: var(--text-color); 
 }
 
+
 /* Leadership Section in Dark Mode */
+body.dark-mode .leadership {
+  background-color: var(--text-color); 
+  border-color: var(--text-color); 
+  box-shadow: 0 2px 6px teal; 
+  color: #f6f8f1;
+
+}
 body.dark-mode .leadership-container .leadership-box {
-  background-color: var(--text-color); /* Background matches dark mode */
-  border-color: #804186; /* Purple border */
+  background-color: #132a43; 
+  border-color: var(--text-color); 
 }
 
 body.dark-mode .leadership-container .leadership-box:nth-child(even) {
-  background-color: #1b3550; /* Slightly deeper blue for alternation */
+  background-color: #132a43;
 }
 
 body.dark-mode .leadership-container .leadership-box:hover {
-  border-color: #d6aadf; /* Light purple hover border */
+  border-color: teal;
 }
 
 body.dark-mode .leadership-box i {
-  color: #804186; /* Purple icons */
+  color: teal;
 }
 
 body.dark-mode .leadership-box h3 {
-  color: #d6aadf; /* Purple for headings */
+  color: teal; 
+}
+body.dark-mode .leadership h2 {
+  color: #f6f8f1;
 }
 
 body.dark-mode .leadership-box p {
-  color: #f6f8f1; /* Light text for paragraphs */
+  color: #f6f8f1; 
+}
+
+
+/* Organizations Section */
+body.dark-mode .orgs {
+  background-color: var(--text-color); 
+  color: #f6f8f1; 
+  box-shadow: 0 2px 6px teal;
+
+}
+
+
+/* Contact Me Section */
+body.dark-mode .contact {
+  background-color: var(--text-color); 
+  color: #f6f8f1; 
+  box-shadow: 0 2px 6px teal; 
+
+}
+
+body.dark-mode .contact h2 {
+  color: teal;
+}
+
+body.dark-mode .contact form .input-box input,
+body.dark-mode .contact form textarea {
+  background-color: #132a43;
+  color: #f6f8f1;
+  border: 1px solid teal;
+}
+
+body.dark-mode .contact form .btn {
+  background-color: teal;
+  color: #f6f8f1;
+  box-shadow: 0 0 1rem teal;
+}
+
+body.dark-mode .contact form .btn:hover {
+  background-color: #804186;
+  color: #f6f8f1;
+}
+body.dark-mode .experience .heading {
+  color: #f6f8f1;
+}
+body.dark-mode .portfolio-box {
+  background-color: #132a43;
 }
