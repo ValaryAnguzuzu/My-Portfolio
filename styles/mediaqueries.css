@@ -129,13 +129,18 @@
 }
 
 
-@media (max-width: 365px) {
+@media (max-width: 368px) {
   .home-img img {
     width: 90vw;
   }
 
   .about-img img {
-    width: 90vw;
+    width: 0vw;
+  }
+
+  .social-media a {
+    margin: 1rem;
+    margin-bottom: 3rem; 
   }
 }
 
