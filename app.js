@@ -46,3 +46,15 @@ const darkModeToggle = document.getElementById("dark-mode-toggle");
 darkModeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 });
+
+
+//scroll reveal
+
+ScrollReveal ({
+  reset: true,
+  distance: "80px",
+  duration: 2000,
+  delay: 200
+});
+
+ScrollReveal().reveal('.home');
