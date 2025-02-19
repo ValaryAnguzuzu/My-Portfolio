@@ -106,7 +106,8 @@
     <section class="portfolio" id="portfolio">
       <h2 class="heading">My <span>Projects</span></h2>
 
-      <div class="portfolio-container" >  <!--style="color: #f6f8f1"-->
+      <div class="portfolio-container">
+        <!--style="color: #f6f8f1"-->
         <div class="portfolio-box">
           <img src="img/portfolio6.jpg" alt="" />
           <div class="portfolio-layer">
@@ -501,37 +502,30 @@
     <!-- contact section -->
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
-      <form action="#">
+      <form id="contact-form">
         <div class="input-box">
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Email Address" />
+          <input type="text" id="name" placeholder="Your Name" />
+          <input type="email" id="email" placeholder="Email Address" />
         </div>
 
         <div class="input-box">
-          <input type="number" placeholder="Mobile Number" />
-          <input type="text" placeholder="Email Subject" />
+          <input type="number" id="number" placeholder="Mobile Number" />
+          <input type="text" id="subject" placeholder="Email Subject" />
         </div>
         <textarea
           name=""
-          id=""
+          id="content"
           cols="30"
           rows="10"
           placeholder="Your Message"
         ></textarea>
-        <input type="submit" value="Send Message" class="btn" />
+        <input
+          type="submit"
+          value="Send Message"
+          class="btn"
+          onclick="sendMail()"
+        />
       </form>
-
-      <!-- Details Section -->
-      <!-- <div class="contact-details">
-      <h3>Valary Anguzuzu</h3>
-      <p>Full Stack Developer</p>
-      <div class="details">
-        <p><strong>Phone:</strong> 224-435-9505</p>
-        <p><strong>Email:</strong> valaryanguzuzu2028@u.northwestern.edu</p>
-        <p><strong>LinkedIn:</strong> <a href="#">https://www.linkedin.com/in/valaryanguzuzu/</a></p>
-      </div>
-    </div>
-    </div> -->
     </section>
 
     <!-- footer section -->
@@ -551,5 +545,18 @@
     <!-- custom js -->
     <script src="app.js"></script>
     <script src="email.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "2gcyBHeYW6NUQyB4i",
+      });
+   })();
+</script>
   </body>
 </html>
